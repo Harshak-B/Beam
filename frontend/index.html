@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beam — Where brands and creators click</title>
+<link rel="icon" type="image/png" href="./images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="toast-wrap" id="toasts"></div>
+
+<!-- ================= LANDING ================= -->
+<div id="landing">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">Beam<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="#how">How it works</a>
+      <a href="#brands">For brands</a>
+      <a href="#creators">For creators</a>
+    </nav>
+    <div class="header-actions">
+      <button class="link-btn" data-auth="login">Log in</button>
+      <button class="btn btn-solid btn-sm" data-auth="signup">Get started</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Where brands<br>and creators<br><em>click.</em></h1>
+      <p class="hero-sub">Beam scores every creator against your brief — category, platform, reach, engagement, budget — so the first name you see is the one worth paying. Pitch, agree, deliver, get paid, all on one board.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-coral" data-auth="signup-creator">Join as a creator</button>
+        <button class="btn btn-outline" data-auth="signup-brand">Join as a brand</button>
+      </div>
+      <p class="hero-trust">Already trusted by teams at Solstice Skincare, Northloop Coffee, and 1,800+ growing brands.</p>
+    </div>
+
+    <div class="hero-collage" aria-hidden="true">
+      <div class="collage-card card-1">
+        <div class="card-top"><span class="avatar" style="background:#FFC245">L</span><div><strong>@lunaskies</strong><small>Skincare · Instagram</small></div></div>
+        <!-- <div class="card-media"></div> -->
+         <div class="card-media" style="background-image:url('./images/skincare.jpg');background-size:cover;background-position:center"></div>
+        <div class="card-stats"><span>212K reach</span><span>6.4% eng.</span></div>
+      </div>
+      <div class="collage-card card-2">
+        <div class="card-top"><span class="avatar" style="background:#FF4F70">R</span><div><strong>@theroastedhour</strong><small>Food · YouTube</small></div></div>
+        <!-- <div class="card-media alt"></div> -->
+         <div class="card-media" style="background-image:url('./images/food.jpg');background-size:cover;background-position:center"></div>
+        <div class="card-stats"><span>88K reach</span><span>9.1% eng.</span></div>
+      </div>
+      <div class="pin-note card-3">
+        <p style="margin:0">“Booked three campaigns in a week. The match score did the pitching for me.”</p>
+        <span>— Priya, creator</span>
+      </div>
+      <div class="collage-card card-4">
+        <div class="card-top"><span class="avatar" style="background:#8CE0C6">F</span><div><strong>@fieldnotes.jay</strong><small>Outdoors · YouTube</small></div></div>
+        <div class="card-media" style="background-image:url('./images/gaming.jpg');background-size:cover;background-position:center"></div>
+        <div class="card-stats"><span>340K reach</span><span>5.2% eng.</span></div>
+      </div>
+      <div class="tape tape-1"></div>
+      <div class="tape tape-2"></div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>24,800 campaigns launched</span><span class="dot-sep">•</span>
+      <span>₹3.2 crore paid out to creators</span><span class="dot-sep">•</span>
+      <span>1,900 brands onboarded</span><span class="dot-sep">•</span>
+      <span>new collab: @lunaskies × Solstice Skincare</span><span class="dot-sep">•</span>
+      <span>24,800 campaigns launched</span><span class="dot-sep">•</span>
+      <span>₹3.2 crore paid out to creators</span><span class="dot-sep">•</span>
+      <span>1,900 brands onboarded</span><span class="dot-sep">•</span>
+      <span>new collab: @lunaskies × Solstice Skincare</span>
+    </div>
+  </div>
+
+  <section class="section how" id="how">
+    <h2>From brief to payout, in three moves.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Post the brief</h3>
+        <p>A brand sets category, platform, follower floor, engagement floor and budget. Beam scores every creator on the board against it out of 100 and ranks them.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>Pitch and agree</h3>
+        <p>Creators see the full budget and their own match score before they apply. Brands move each application through review, then accept the ones they want.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Deliver and get paid</h3>
+        <p>Accepted work moves to in progress, then completed. Both sides watch the same status, so nobody chases an invoice or a screenshot.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="split-panel panel-light" id="brands">
+      <span class="panel-tag">For brands</span>
+      <h2>Stop scrolling profiles. Read a ranked list.</h2>
+      <ul class="panel-list">
+        <li>Every creator scored on category, platform, reach, engagement and budget fit</li>
+        <li>Filter the whole roster by niche, followers, engagement rate and location</li>
+        <li>One board for applications, statuses and campaign performance</li>
+      </ul>
+      <button class="btn btn-outline" data-auth="signup-brand">Post a campaign</button>
+    </div>
+    <div class="split-panel panel-dark" id="creators">
+      <span class="panel-tag panel-tag-light">For creators</span>
+      <h2>See the budget and your odds before you write a word.</h2>
+      <ul class="panel-list">
+        <li>Full budget shown up front — no lowball surprises</li>
+        <li>Your match score on every brief, with the reasons behind it</li>
+        <li>Track applied, accepted, in progress and completed in one list</li>
+      </ul>
+      <button class="btn btn-coral" data-auth="signup-creator">Create your profile</button>
+    </div>
+  </section>
+
+  <section class="section" style="max-width:640px;margin:0 auto;text-align:center">
+    <h2 style="font-size:clamp(2rem,4vw,2.7rem)">Ready to make some noise?</h2>
+    <p class="muted">Pick a side of the board. You can try a demo account with data already on it.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <button class="btn btn-coral" data-auth="signup">Join the board</button>
+      <button class="btn btn-outline" data-auth="login">Use a demo account</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="logo">Beam<span class="dot">.</span></span>
+    <p>Connecting brands and creators since 2026.</p>
+    <div class="spread">
+      <a href="#how">How it works</a><a href="#brands">For brands</a><a href="#creators">For creators</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app" class="hidden"></div>
+<div id="auth" class="hidden"></div>
+<script src="script.js"></script>
+</body>
+</html>

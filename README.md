@@ -68,7 +68,7 @@ Brands and creators only ever see/modify their own data (checked on the server).
 | PUT | `/brands/me` | brand | edit own profile |
 | GET / PUT | `/notifications`, `/notifications/read-all`, `/notifications/:id/read` | any | notifications |
 
-## Notes
+## Notes 
 - **Security:** every query is parameterized; passwords are bcrypt-hashed; SQL/stack details are logged server-side only, never sent to the browser. `.env` is git-ignored.
 - **Frontend hosted separately?** Set `API_BASE` at the top of `frontend/script.js` to the full API URL and add the frontend's origin to `CORS_ORIGIN` in `backend/.env`.
 - The login token is kept in the browser's `localStorage`. For production, serve over HTTPS and consider adding login rate-limiting.

@@ -1,0 +1,9 @@
+# Tell Nixpacks to install Node.js 18
+[phases.setup]
+nixPkgs = ["nodejs_18"]
+
+[phases.install]
+cmds = ["npm install --prefix backend"]
+
+[start]
+cmd = "node backend/server.js"

@@ -1,4 +1,4 @@
-// Entry point:  npm start   (from the backend/ folder)
+// Entry point:  npm start   (from the backend/ folder, or from repo root via railway.json)
 const { validateEnv } = require("./src/config/env");
 validateEnv(); // stops with a clear message if .env is incomplete
 
@@ -8,9 +8,21 @@ const { pool } = require("./src/config/db");
 const PORT = Number(process.env.PORT) || 3000;
 
 (async () => {
+  // On Railway, auto-run the schema migrations so tables exist on first boot.
+  if (process.env.RAILWAY_ENVIRONMENT) {
+    try {
+      console.log("⏳ Running database migrations...");
+      const { migrate } = require("./scripts/migrate");
+      await migrate();
+    } catch (err) {
+      console.error("✖ Migration failed:", err.message);
+      process.exit(1);
+    }
+  }
+
   try {
     await pool.query("SELECT 1");
-    await pool.query("SELECT COUNT(*) FROM users"); // fails if sql/schema.sql hasn't been run
+    await pool.query("SELECT COUNT(*) FROM users"); // fails if schema hasn't been run
     console.log(`✔ Connected to MySQL at ${process.env.DB_HOST}:${process.env.DB_PORT}, database "${process.env.DB_NAME}"`);
   } catch (err) {
     console.error("\n✖ Could not use the MySQL database.");
